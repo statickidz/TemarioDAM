@@ -43,11 +43,11 @@ public class LecturaEscritura {
         try(FileWriter fileWriter = new FileWriter(file)) {
             fileWriter.write("Firstname: Adrian");
             fileWriter.write("\r\n");
-            fileWriter.write("Lastname: Barrio Andres");
+            fileWriter.write("Lastname: Perez Mayo");
             fileWriter.write("\r\n");
-            fileWriter.write("VAT: 72893564D");
+            fileWriter.write("VAT: 75693546D");
             fileWriter.write("\r\n");
-            fileWriter.write("Password: 89sgu9a8ybd9879sdf8g789");
+            fileWriter.write("Password: 89sgu9a23459879sdf8g789");
             fileWriter.close();
         } catch(IOException io) {
             System.out.println("Write file error exception" + io.getMessage());
@@ -78,9 +78,9 @@ public class LecturaEscritura {
             //Writing stuff in there
             randomAccess.write("Firstname: Adrian".getBytes());
             randomAccess.write("\r\n".getBytes());
-            randomAccess.write("Lastname: Barrio Andres".getBytes());
+            randomAccess.write("Lastname: Perez Mayo".getBytes());
             randomAccess.write("\r\n".getBytes());
-            randomAccess.write("VAT: 72893564D".getBytes());
+            randomAccess.write("VAT: 75693546D".getBytes());
             
             //Write another stuff on byte 1200
             randomAccess.seek(1200);
