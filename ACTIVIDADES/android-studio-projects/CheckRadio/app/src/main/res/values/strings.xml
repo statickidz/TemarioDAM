@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CheckRadio</string>
+    <string     name="paypal">PayPal</string>
+<string name="credit_card">Tarjeta de Crédito</string>
+<string name="sell">Vender</string>
+<string name="paypal_msg">Introduce tu dirección de PayPal para proceder al pago</string>
+<string name="credit_card_msg">Introduce tu número de tarjeta de crédito</string>
+<string name="sell_to_hell">Ahora tu alma PErtenece Al MALIGNO!!!!</string>
+<string name="no_sell">NOOOOOO has vendido tu alma!!!</string>
+<string name="sell_my_soul">Vendo mi alma!!!</string>
+<string name="accept">Acepto</string>
+<string name="accept_conditions">Acepta los Terminos o moriras</string>
+<string name="select_payment_method">Selecciona un método de pago</string>
+<string name="congratulations">¡¡¡Felicidades!!!</string>
+<string name="ingress_money">Nos encargaremos de ingresarte el dinero en la cuenta que nos has proporcionado:</string>
+<string name="sell_soul_us">Gracias por vender tu alma con nosotros.</string>
+<string name="surrender">Me arrepiento</string>
+    </resources>

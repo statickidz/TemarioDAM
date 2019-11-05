@@ -1,0 +1,1 @@
+/usr/share/pyshared/openerp/addons/product/i18n/fi.po

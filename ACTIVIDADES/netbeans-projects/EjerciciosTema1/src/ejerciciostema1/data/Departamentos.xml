@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<departamentos>
+    <departamento numero="1">
+        <nombre>Departamento 1</nombre>
+        <localidad>Soria</localidad>
+    </departamento>
+    <departamento numero="2">
+        <nombre>Departamento 2</nombre>
+        <localidad>Madrid</localidad>
+    </departamento>
+    <departamento numero="3">
+        <nombre>Departamento 3</nombre>
+        <localidad>Logroño</localidad>
+    </departamento>
+    <departamento numero="4">
+        <nombre>Departamento 4</nombre>
+        <localidad>Bilbao</localidad>
+    </departamento>
+    <departamento numero="5">
+        <nombre>Departamento 5</nombre>
+        <localidad>Barcelona</localidad>
+    </departamento>
+</departamentos>

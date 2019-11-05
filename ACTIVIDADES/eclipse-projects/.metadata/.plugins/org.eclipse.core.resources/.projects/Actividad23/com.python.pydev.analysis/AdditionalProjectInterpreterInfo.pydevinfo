@@ -1,0 +1,42 @@
+-- VERSION_4
+-- START DISKCACHE_2
+G:\dam2\eclipse-projects\.metadata\.plugins\org.eclipse.core.resources\.projects\Actividad23\com.python.pydev.analysis\v2_indexcache
+Actividad23inc.__init__|1454345329608474000|G:\dam2\eclipse-projects\Actividad23\src\Actividad23inc\__init__.py
+Actividad24.__init__|1454346899768483000|G:\dam2\eclipse-projects\Actividad23\src\Actividad24\__init__.py
+Actividad23.Actividad23Main|1454345343023960000|G:\dam2\eclipse-projects\Actividad23\src\Actividad23\Actividad23Main.py
+Actividad23.__init__|1454344750120062000|G:\dam2\eclipse-projects\Actividad23\src\Actividad23\__init__.py
+Actividad24.Actividad24|1454346586916888000|G:\dam2\eclipse-projects\Actividad23\src\Actividad24\Actividad24.py
+-- END DISKCACHE
+-- START DICTIONARY
+10
+2=Actividad23inc.__init__
+6=Mesa
+8=Mesa.setColor
+3=Actividad24.__init__
+10=Mueble.setTipo
+5=Mueble
+1=Actividad23.Actividad23Main
+9=Mueble.__init__
+4=Actividad24.Actividad24
+7=Mesa.__init__
+-- END DICTIONARY
+-- START TREE 1
+9
+c|1|c!11@
+cal|1|calcula!18@
+mes|1|Mesa!25@
+ms|1|ms!27@
+mu|2|mu!35@mu!27@
+mue|1|Mueble!25@
+op1|1|op1!11@
+op2|1|op2!11@
+pri|1|printMenu!18@
+-- END TREE
+-- START TREE 2
+5
+__i|2|__init__!5&26@__init__!6&26@
+col|2|color!7&27@color!8&27@
+get|2|getTipo!5&26@getColor!6&26@
+set|2|setColor!6&26@setTipo!5&26@
+tip|2|tipo!9&27@tipo!10&27@
+-- END TREE

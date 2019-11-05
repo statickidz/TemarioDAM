@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Filmoteca>
+    <Película>
+        <Título>Origen</Título>
+        <Autor>Christipher Nolan</Autor>
+        <AñoDePublicación>2010</AñoDePublicación>
+    </Película>
+    <Película>
+        <Título>Oceans 11</Título>
+        <Autor>Steven Soderbergh</Autor>
+        <AñoDePublicación>2001</AñoDePublicación>
+    </Película>
+    <Película>
+        <Título>El curioso case de Benjamin Button</Título>
+        <Autor>David Fincher</Autor>
+        <AñoDePublicación>2009</AñoDePublicación>
+    </Película>
+    <Película>
+        <Título>El coleccionista de huesos</Título>
+        <Autor>Phillip Noice</Autor>
+        <AñoDePublicación>2000</AñoDePublicación>
+    </Película>
+</Filmoteca>

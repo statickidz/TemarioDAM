@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+	
+	<menuitem name= "Libros" id="milibro_menu"/>
+	
+	<record model="ir.ui.view" id="milibro_tree_view"> 
+		<field name="name">milibro.tree</field> 
+		<field name="model">milibro</field>
+		<field name="type">tree</field> 
+		<field name= "arch" type="xml"> 
+			<tree string="Libros">
+				<field name="titulo"/> 
+				<field name="paginas"/> 
+				<field name="autor"/> 
+				<field name="editorial"/>	
+			</tree>
+		</field>  
+	</record>
+
+	<record model="ir.ui.view" id="milibro_form_view">
+		<field name="name">milibro.form</field> 
+		<field name="model">milibro</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Libros">
+				<field name="titulo"/>
+				<field name="paginas"/>
+				<field name="autor"/> 
+				<field name="editorial"/>
+			</form>  
+		</field>  
+	</record>
+	
+	<record model="ir.actions.act_window" id="action_milibro_form"> 
+		<field name="name">Libros</field> 
+		<field name="res_model">milibro</field>
+		<field name="view_type">form</field> 
+		<field name="view_mode">tree,form</field> 
+	</record>
+	<menuitem name="Libros" id="mislibros" parent= "milibro_menu"/>
+	<menuitem name="Mis Libros" id="milibro_form" parent= "mislibros" action= "action_milibro_form"/>
+	
+</data>  
+</openerp>

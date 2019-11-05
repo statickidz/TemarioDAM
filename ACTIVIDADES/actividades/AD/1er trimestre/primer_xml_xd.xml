@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clase>
+	<titulo>Clase DAM</titulo>
+	<alumno>
+		<nombre>Silvia</nombre>
+		<edad>21</edad>
+		<lugar>Ágreda</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Marcos</nombre>
+		<edad>20</edad>
+		<lugar>Almazán</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Elisa</nombre>
+		<edad>24</edad>
+		<lugar>Almazán</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Juan</nombre>
+		<edad>23</edad>
+		<lugar>Zaragoza</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Cristina</nombre>
+		<edad>23</edad>
+		<lugar>Soria</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Andrea</nombre>
+		<edad>22</edad>
+		<lugar>Soria</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Adrián B</nombre>
+		<edad>26</edad>
+		<lugar>Soria</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Cesar</nombre>
+		<edad>25</edad>
+		<lugar>Soria</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Luismi</nombre>
+		<edad>23</edad>
+		<lugar>República Dominicana</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Óscar</nombre>
+		<edad>21</edad>
+		<lugar>Soria</lugar>
+	</alumno>
+	<alumno>
+		<nombre>Adrián G</nombre>
+		<edad>25</edad>
+		<lugar>Soria</lugar>
+	</alumno>
+</clase>

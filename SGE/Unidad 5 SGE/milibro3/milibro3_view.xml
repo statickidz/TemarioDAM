@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+	<record model="ir.actions.act_window" id="action_milibro3_form">
+		<field name="name">milibro3</field>
+		<field name="res_model">milibro</field>
+	</record>
+	
+	<menuitem name="Mis Libros 3" id="milibro3_form" parent="milibro.mislibros"
+		action="action_milibro3_form"/>
+		
+	<record model="ir.ui.view" id="milibro3_tree_view">
+		<field name="name">milibro3.tree</field>
+		<field name="model">milibro</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Libros">
+				<field name="nombre"/>
+				<field name="fecha"/>
+			</tree>
+		</field>
+	</record>
+	
+	<record model="ir.ui.view" id="milibro3_form_view">
+		<field name="name">milibro3.form</field>
+		<field name="model">milibro</field>
+		<field name="inherit_id" ref="milibro.milibro_form_view"/>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<data>
+				<field name="titulo" position="replace">
+					<field name="nombre"/>
+				</field>
+				<field name="paginas" position="replace"/>
+				<field name="editorial" position="after" >
+					<field name="isbn" />
+					<field name="precio"/>
+					<field name="fecha"/>
+					<field name="revisado"/>
+					<field name="aprobado"/>
+					<field name="resumen"/>
+				</field>
+			</data>
+		</field>
+	</record>
+	
+</data>
+</openerp>

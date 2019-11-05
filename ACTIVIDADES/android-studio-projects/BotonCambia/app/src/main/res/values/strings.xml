@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BotonCambia</string>
+
+    <string name="hello_world">Hola Hola No Vengas Sola</string>
+    <string name="change_text">Cambia el texto bruh!</string>
+    <string name="action_settings">Settings</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CalculadoraPrimos</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="title">Calculadora de números primos:</string>
+    <string name="tutorial">Introduce qué número primo quieres calcular. Por ejemplo, si deseas saber el sexto número primo, pon el número 6 y dale a calcular. Te dirá que el sexto número primo es el 11</string>
+    <string name="position">Posición</string>
+    <string name="calculate">Calcular!</string>
+</resources>

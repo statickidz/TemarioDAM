@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1040.0" stylesheets="@css/Trackio.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statickidz.trackio.view.PlayerController">
+    <children>
+        <SplitPane dividerPositions="0.35" focusTraversable="false" layoutX="183.0" layoutY="76.0" prefHeight="575.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane maxWidth="240.0" minWidth="240.0" prefWidth="240.0" styleClass="background-player">
+                    <children>
+                        <HBox alignment="CENTER" layoutY="504.0" prefHeight="82.0" prefWidth="240.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Button layoutX="112.1875" layoutY="259.0" mnemonicParsing="false" onAction="#handlePrevTrack" styleClass="button-prev">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="STEP_BACKWARD" size="22" textAlignment="CENTER" />
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button fx:id="playButton" mnemonicParsing="false" onAction="#handlePlayTrigger" styleClass="button-play">
+                                    <graphic>
+                                        <FontAwesomeIconView fx:id="playButtonIcon" fill="WHITE" glyphName="PAUSE" size="25" smooth="false" strokeMiterLimit="0.0" strokeWidth="0.0" styleClass="icon-play" textAlignment="CENTER" />
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#handleNextTrack" styleClass="button-prev">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="STEP_FORWARD" size="22" textAlignment="CENTER" />
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <ImageView fx:id="albumImageView" fitHeight="156.0" fitWidth="156.0" layoutX="42.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0">
+                            <image>
+                                <Image url="@img/noalbumart.png" />
+                            </image>
+                     <effect>
+                        <Reflection fraction="0.42" topOpacity="0.29" />
+                     </effect>
+                        </ImageView>
+                        <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="489.0" styleClass="label-title" text="Selecciona" textAlignment="CENTER" AnchorPane.bottomAnchor="134.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                        <Label fx:id="artistLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="516.0" mouseTransparent="true" styleClass="label-author" text="UNA LISTA" textAlignment="CENTER" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                        <ListView fx:id="trackListView" layoutY="79.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0" />
+                        <Label layoutY="64.0" onMouseClicked="#handleNewTrackList" styleClass="label-new-playlist" text="  Crear nueva lista" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                            <graphic>
+                                <FontAwesomeIconView fill="#40edbd" glyphName="PLUS_CIRCLE" />
+                            </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Label>
+                  <Label fx:id="timeLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="550.0" mouseTransparent="true" prefHeight="16.0" prefWidth="122.0" styleClass="label-time" text="00:00" textAlignment="CENTER" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <ImageView fx:id="albumImageViewLeft" fitHeight="122.0" fitWidth="122.0" layoutX="-94.0" layoutY="346.0" onMousePressed="#handlePrevTrack" opacity="0.7" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="182.0">
+                     <image>
+                        <Image url="@img/noalbumart.png" />
+                     </image>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="albumImageViewRight" fitHeight="122.0" fitWidth="122.0" layoutX="212.0" layoutY="346.0" onMousePressed="#handleNextTrack" opacity="0.7" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="182.0">
+                     <image>
+                        <Image url="@img/noalbumart.png" />
+                     </image>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                        <ImageView fx:id="trackioLogo" fitHeight="30.0" fitWidth="166.0" layoutX="8.0" layoutY="8.0" onMousePressed="#handleCredits" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="102.55101776123047" AnchorPane.topAnchor="15.0">
+                            <image>
+                                <Image url="@img/logo-trackio.png" />
+                            </image>
+                        </ImageView>
+                        <ProgressBar fx:id="progressBar" layoutX="15.0" layoutY="535.0" maxHeight="16.0" minHeight="6.0" prefHeight="16.0" prefWidth="210.0" progress="0.0" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding></ProgressBar>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
+                    <children>
+                        <ToolBar fx:id="mainToolBar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="43.0" prefWidth="321.0" styleClass="background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <Button mnemonicParsing="false" onAction="#handleClose" styleClass="button-toolbar">
+                                    <graphic>
+                                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@img/top-close.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#handleMaximize" styleClass="button-toolbar">
+                                    <graphic>
+                                        <ImageView fx:id="maximizeImageView" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@img/top-square.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#handleMinimize" styleClass="button-toolbar">
+                                    <graphic>
+                                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@img/top-minus.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                            </items>
+                        </ToolBar>
+                        <TableView fx:id="trackTableView" cacheHint="SPEED" layoutX="-12.5" layoutY="58.0" prefHeight="298.0" prefWidth="175.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                            <columns>
+                                <TableColumn fx:id="titleColumn" prefWidth="500.0" text="TÍTULO" />
+                                <TableColumn fx:id="authorColumn" prefWidth="239.0" text="AUTOR" />
+                        <TableColumn fx:id="albumColumn" prefWidth="200.0" text="ALBUM" />
+                        <TableColumn fx:id="yearColumn" prefWidth="200.0" text="AÑO" visible="false" />
+                            </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

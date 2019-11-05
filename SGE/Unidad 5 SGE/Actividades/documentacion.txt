@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+'''
+ Created el 01/02/2014 
+ 
+  @author: YOMISMO
+  
+'''
+def miFun(p):
+    """
+         Mi function con un par?metro 
+         @version 1 
+         @param p valor necesario 
+         @return un texto
+    """
+    if p > 2: return "Mayor de dos" 
+    else: return "Menor o igual que dos"

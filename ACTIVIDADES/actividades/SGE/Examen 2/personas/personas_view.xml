@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+	<!--
+		Tree view de personas
+
+		Muestra una lista con todas las personas
+		en forma de arbol
+	-->
+	<record model="ir.ui.view" id="personas_tree_view"> 
+		<field name="name">personas.tree</field> 
+		<field name="model">personas</field>
+		<field name="type">tree</field> 
+		<field name= "arch" type="xml"> 
+			<tree string="Persons">
+				<field name="name"/> 
+				<field name="lastname"/> 
+                <field name="gender"/>
+                <field name="street"/>
+                <field name="telephone"/>
+			</tree>
+		</field>  
+	</record>
+
+    <!--
+    	Form view de personas
+
+    	Vista individual de personas, sirve tanto
+    	como para edicion como para vista
+    -->
+	<record id="personas_normal_form_view" model="ir.ui.view">
+        <field name="name">personas.form</field>
+        <field name="model">personas</field>
+        <field name="arch" type="xml">
+            <form string="Persons" version="7.0">
+                <sheet>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string="Name"/>
+                        </div>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <div class="oe_edit_only">
+                            <label for="lastname" string="Lastname"/>
+                        </div>
+                        <h2>
+                            <field name="lastname"/>
+                        </h2>
+                    </div>
+                    <div class="oe_right oe_button_box" name="buttons">
+                    </div>
+                    <group>
+                        <group>
+                            <field name="street"/>
+                            <field name="telephone"/>
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--
+		Accion del menu cuando se pulsa sobre el
+
+		Define la accion por defecto cuando pulsamos
+		sobre el elemento del menu que tiene como action
+		el id de este <record>
+    -->
+	<record model="ir.actions.act_window" id="action_personas_form"> 
+		<field name="name">Persons</field> 
+		<field name="res_model">personas</field>
+		<field name="view_type">form</field> 
+		<field name="view_mode">tree,form</field> 
+	</record>
+
+	<!-- Items de menu laterales -->
+	<menuitem name="Persons" id="personas_menu"/>
+	<menuitem name="Persons" id="personas" parent="personas_menu"/>
+	<menuitem name="My Persons" id="personas_form" parent="personas" action="action_personas_form"/>
+	
+</data>  
+</openerp>

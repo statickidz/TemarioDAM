@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<!-- Top menu item -->
+		<menuitem name="Alumno" id="alumno_menu_base"/>
+			<menuitem name="Registro alumno" id="alumno_menu_base_reg" parent="alumno_menu_base" />
+		
+		<!-- tree -->
+        <record model="ir.ui.view" id="alumno_tree_view">
+            <field name="name">alumno.tree</field>
+            <field name="model">alumno</field>
+            <field name="arch" type="xml">
+                <tree string="Registro de alumnos">
+                    <field name="nombres"/>
+                    <field name="apellido_paterno"/>
+                    <field name="dni"/>
+                    <field name="fecha_nacimiento"/>
+                    <field name="activo"/>
+                </tree>
+            </field>
+        </record>
+        
+		<!-- simple form -->
+        <record model="ir.ui.view" id="view_alumno_simple_form">
+            <field name="name">alumno.form</field>
+            <field name="model">alumno</field>
+            <field name="arch" type="xml">
+                <form string="Registro Alumno" version='7.0'>
+					<field name="foto" widget='image' class="oe_avatar oe_left" options='{"preview_image": "image_medium"}'/>
+					<div class="oe_title">
+						<h1>
+							<field name="nombres" default_focus='1' placeholder="Nombres"/>
+							<field name="apellido_paterno" placeholder='Apellido paterno' />
+							<field name="apellido_materno" placeholder='Apellido materno'/>
+						</h1>
+						<group>
+							<field name="dni"/>
+							<field name="fecha_nacimiento"/>
+							<field name="nacionalidad"/>
+							<field name="direccion"/>
+							<field name="tel_cel"/>
+							<field name="activo"/>
+							<field name="observaciones"/>
+						</group>
+					</div>
+				</form>
+				
+            </field>
+        </record>
+        
+        <!-- form -->
+        <record id="view_alumno_form" model="ir.ui.view">
+            <field name="name">alumno</field>
+            <field name="model">alumno</field>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <form string="Registro Alumnos" version="7.0">
+                <sheet>
+					<field name="foto" widget='image' class="oe_avatar oe_left" options='{"preview_image": "image_medium", "size": [90, 90]}'/>
+					<div class="oe_title">
+						<h1>
+							<field name="nombres" default_focus='1' placeholder="Nombres"/>
+							<field name="apellido_paterno" placeholder='Apellido paterno' />
+							<field name="apellido_materno" placeholder='Apellido materno'/>
+						</h1>
+					</div>
+						<group>
+							<group>
+								<field name="dni"/>
+								<field name="fecha_nacimiento"/>
+								<field name="nacionalidad"/>
+								<field name="direccion"/>
+								<field name="tel_cel"/>
+								<field name="activo"/>
+							</group>
+							<group>
+								<field name="observaciones"/>
+							</group>
+						</group>
+				</sheet>
+                </form>
+            </field>
+        </record>
+		
+		<!-- action -->
+        <record model="ir.actions.act_window" id="action_alumno">
+            <field name="name">alumno</field>
+            <field name="res_model">alumno</field>
+        </record>
+
+        <menuitem name="Registro alumnos" parent="alumno_menu_base_reg" id="reg_alumno_menu" action="action_alumno"/>
+    </data>
+</openerp>

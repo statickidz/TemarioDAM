@@ -1,0 +1,88 @@
+Actividad 5.5
+
+# -*- coding: utf-8 -*-
+
+#   Esta línea es un comentario
+#   Numeros
+    iNuml = 23  # Entero como int de C
+    fNuml = 3.34  # float o reales usa doble precisión
+    INuml = 3L  # Entero largo como long de C
+    iNum2 = 027  # Octal
+    iNum3 = 0x3F  # Hexadecimal
+    cNuml = 2.1 + 3.1j  # Complejos
+    cNum2 = -4.3 - 1j
+    print "Valores", iNuml, fNuml, cNuml
+    print "Suma de los dos primeros", iNuml + fNuml
+    print "Suma de los dos últimos", fNuml + cNuml
+    print "Suma de dos complejos", str(cNuml) + "+" + str(cNum2) + "=" + str(cNuml + cNum2) 
+    print "Octales y hexadecimales", iNum2, iNum3
+
+
+Actividad 5.6
+
+from decimal import Decimal, getcontext 
+fNuml = 3.34  # float o reales usa doble precision
+dNuml = Decimal(fNuml) # La mayor precision posible 
+print "real y decimal", fNuml, dNuml 
+getcontext().prec = 6
+print "Precision 6:", Decimal(1) / Decimal(7) 
+getcontext().prec = 28
+print "Precision 28:", Decimal(1) / Decimal(7)
+
+Actividad 5.7
+
+#    Operadores +,-+*,/,//,**,%
+from decimal import Decimal
+iNuml = 23  # Entero como int de C
+fNuml = 3.34  # float o reales usa doble precision
+INuml = 3L  # Entero largo como long de C
+print "multiplicacion:" + str(iNuml) + "*" + str(fNuml) + "=", iNuml * fNuml
+print "division:" + str(iNuml) + "/Decimal(" + str(fNuml) + ")=", iNuml / Decimal(fNuml)
+print "division:" + str(iNuml) + "/" + str(fNuml) + "=", iNuml / fNuml
+print "division entera:" + str(iNuml) + "//" + str(fNuml) + "=", iNuml // fNuml
+print "division (solo enteros):" + str(iNuml) + "/" + str(INuml) + "=", iNuml / INuml # Determina division entera 
+print "modulo: " + str(iNuml) + "%" + str(INuml) + "=", iNuml % INuml 
+print "exponente:" + str(INuml) + "**" + str(INuml) + "=", INuml ** INuml
+
+Actividad 5.8
+
+#    Operadores a nivel de bit:
+bNuml =0x9 #1001
+bNum2 = 0xC #1100 
+print "And (&)", bNuml & bNum2 # 1000 
+print "Or (|)", bNuml | bNum2 # 1101 
+print "XOR (^)", bNuml ^ bNum2 # 0101 
+print "Not(~)", ~bNuml
+print "Desplazamiento >> de 2", bNuml >> 2 # 0010
+print "Desplazamiento << de 2", bNuml << 2 # 0010 0100 tener en cuenta que son 32 o 64 bits la representacion
+
+Actividad 5.9
+
+from decimal import Decimal
+fNuml = 3.34  # float o reales usa doble precision
+INuml = 3L  # Entero largo como long de C
+dNuml = Decimal(fNuml) # La mayor precision posible 
+print"    Funciones basicas    "
+print dNuml .copy_abs() 
+print dNuml .is_infinite() 
+print dNuml.log10() 
+print dNuml.sqrt() 
+print dNuml.max(INuml)
+print fNuml.hex() # representacion hexadecimal
+print INuml.bit_length()  # bits necesarios para representar el valor
+
+Actividad 5.10
+
+# -*- coding: utf-8 -*-
+#    Booleanos
+#    Operadores and, or y not
+print "True and True:", True and True 
+print "True and False:", True and False 
+print "True or True:", True or True 
+print "True or False:", True or False 
+print "Not True:", not True
+#    Operadores de comparación: ==,!=,<,<=,>,>= 
+print "'a =='a'", 'a' == 'a'
+print '"a'=='b"', 'a' == 'b'
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="569.0" prefWidth="1346.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.controlador.Vista.VistaPrincipalControlador">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleNew" text="Nuevo" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Abrir..." />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Guardar" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Guardar como..." />
+                  <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Salir" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Estadisticas">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatistics" text="Mostrar estadísticas" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

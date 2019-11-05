@@ -1,0 +1,51 @@
+# -*- encoding: utf-8 -*-
+#Actividad 5.34
+a="esto es un ejemplo"
+print a[8:]
+
+#Actividad 5.35
+a=[1,[2,[3,4]],5]
+a[1]=a[1]+[[6,7]]
+print a
+
+#Actividad 5.36
+lista=[]
+i=1
+while i<=10:
+    lista.append(i)
+    i=i+1
+print lista
+
+lista=[]
+for i in range(10):
+    lista.append(i+1)
+print lista
+
+lista=range(1,11)
+print lista
+
+#Actividad 5.37
+tupla=["a","b","c","d","e"]
+lista=[]
+for elemento in tupla:
+    lista.append(elemento)
+print lista
+
+#Actividad 5.38
+def multiplo7(n):
+    if n%7==0:
+        return True
+    else:
+        return False
+for i in range(1,1001):
+    if multiplo7(i)==1:
+        print i
+
+#Actividad 5.39
+a=[0,1,2,3]
+a[2] = [6,7]
+print a
+
+a=[0,1,2,3]
+a[2:3] = [6,7]
+print a

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?> 
+ 
+  <openerp> 
+ 
+          <data> 
+ 
+            <menuitem icon="STOCK_MEDIA_PLAY"  
+ 
+      id="menu_raiz_motion"  
+ 
+      name="Motion Peliculas"/> 
+ 
+                         
+ 
+      <menuitem 
+ 
+                        id="menu_motion_reporte" 
+ 
+                        name="Reportes" 
+ 
+                        parent="motion.menu_raiz_motion"/> 
+ 
+                         
+ 
+      <menuitem 
+ 
+                        id="menu_motion_peli" 
+ 
+                        name="Peliculas" 
+ 
+                        parent="motion.menu_raiz_motion"/> 
+ 
+                                          
+ 
+      <record id="vista_pelicula_form" model="ir.ui.view"> 
+ 
+      <field name="name">motion.pelicula.form</field> 
+ 
+                                <field name="model">motion.pelicula</field> 
+ 
+                                <field name="type">form</field> 
+ 
+                                <field name="arch" type="xml"> 
+ 
+                                  <form string="Peliculas"> 
+ 
+                                          <group col="2" colspan="2"> 
+ 
+                                                <separator colspan="2" string="Informacion  
+ 
+                                                                 General"/> 
+ 
+      <field name="nombre" select="1"/> 
+ 
+                                                        <field name="codigo" select="1"/> 
+ 
+                                                        <field name="nombre_d" select="1"/> 
+ 
+                                               </group> 
+ 
+                                     <group col="2" colspan="2"> 
+ 
+                                                <separator string="Informacion Secundaria"  
+ 
+                                                                colspan="2"/> 
+ 
+                                                  <field name="fecha"/> 
+ 
+                                                        <field name="costo"/>              
+ 
+                                                        <field name="numero"/> 
+ 
+                                                        <field name="costo_a"/> 
+ 
+                                              </group> 
+ 
+                                                <notebook colspan="4"> 
+ 
+                                                <page string="Notas"> 
+ 
+                                                  <field colspan="4" nolabel="1"   
+ 
+                                                                name="notas"/> 
+ 
+                                                </page> 
+ 
+                                                </notebook>                                          
+ 
+                            
+ 
+                               </form> 
+ 
+                    </field> 
+ 
+      </record>                            
+ 
+                            
+ 
+                        <record id="abrir_vista_nueva_pelicula" model="ir.actions.act_window"> 
+ 
+      <field name="name">Nueva pelicula</field> 
+ 
+            <field name="res_model">motion.pelicula</field> 
+ 
+            <field name="view_type">form</field> 
+ 
+            <field name="view_mode">form,tree</field> 
+ 
+                        </record> 
+ 
+                                                        
+ 
+                        <menuitem 
+ 
+         action="abrir_vista_nueva_pelicula" 
+ 
+         id="menu_abrir_vista_nueva_pelicula" 
+ 
+         parent="menu_motion_peli"/> 
+ 
+                                          
+ 
+                        <record id="vista_peliculas_arbol" model="ir.ui.view"> 
+ 
+                          <field name="name">motion.pelicula.tree</field> 
+ 
+                                <field name="model">motion.pelicula</field> 
+ 
+                              <field name="type">tree</field>          
+ 
+                                <field name="arch" type="xml"> 
+ 
+                                  <tree string="Peliculas"> 
+ 
+                <field name="nombre"/> 
+ 
+                                <field name="codigo"/> 
+ 
+                                <field name="nombre_d"/> 
+ 
+                                      </tree> 
+ 
+                          </field> 
+ 
+                        </record> 
+ 
+                                                                                    
+ 
+                        <record id="abrir_vista_peliculas_mi_lista" model="ir.actions.act_window"> 
+ 
+                          <field name="name">All Peliculas</field> 
+ 
+                                <field name="res_model">motion.pelicula</field> 
+ 
+                                <field name="view_type">form</field> 
+ 
+                                <field name="view_mode">tree,form</field>  
+ 
+ 
+ 
+                                <field name="domain">[]</field> 
+ 
+                        </record> 
+ 
+                            
+ 
+                        <menuitem 
+ 
+        action="abrir_vista_peliculas_mi_lista" 
+ 
+       id="menu_abrir_vista_peliculas_arbol" 
+ 
+        parent="menu_motion_peli"/>                                          
+ 
+                                                                      
+ 
+                </data> 
+ 
+  </openerp> 
+ 

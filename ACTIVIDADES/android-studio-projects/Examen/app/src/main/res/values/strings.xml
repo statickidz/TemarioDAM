@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Examen</string>
+    <string name="nombre">Nombre</string>
+    <string name="nombre_alumno" translatable="false">Adrián</string>
+    <string name="nota">Nota</string>
+    <string name="nota_sumada">Nota Sumada</string>
+    <string name="nota_restada">Nota Restada</string>
+</resources>

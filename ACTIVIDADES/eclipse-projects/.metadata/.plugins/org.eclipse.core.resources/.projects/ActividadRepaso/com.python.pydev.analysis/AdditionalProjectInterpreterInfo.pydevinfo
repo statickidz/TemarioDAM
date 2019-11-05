@@ -1,0 +1,34 @@
+-- VERSION_4
+-- START DISKCACHE_2
+G:\dam2\eclipse-projects\.metadata\.plugins\org.eclipse.core.resources\.projects\ActividadRepaso\com.python.pydev.analysis\v2_indexcache
+3.__init__|1453739516070348000|G:\dam2\eclipse-projects\ActividadRepaso\src\3\__init__.py
+1.1|1453741819428957000|G:\dam2\eclipse-projects\ActividadRepaso\src\1\1.py
+5.__init__|1453740146474797000|G:\dam2\eclipse-projects\ActividadRepaso\src\5\__init__.py
+2.2|1453740543695803000|G:\dam2\eclipse-projects\ActividadRepaso\src\2\2.py
+3.3|1453739774172400000|G:\dam2\eclipse-projects\ActividadRepaso\src\3\3.py
+4.__init__|1453739796092533000|G:\dam2\eclipse-projects\ActividadRepaso\src\4\__init__.py
+4.4|1453742141904875000|G:\dam2\eclipse-projects\ActividadRepaso\src\4\4.py
+1.__init__|1453738378649999000|G:\dam2\eclipse-projects\ActividadRepaso\src\1\__init__.py
+2.__init__|1453739160616985000|G:\dam2\eclipse-projects\ActividadRepaso\src\2\__init__.py
+5.5|1453741132919279000|G:\dam2\eclipse-projects\ActividadRepaso\src\5\5.py
+-- END DISKCACHE
+-- START DICTIONARY
+5
+5=1.1
+4=2.2
+3=3.3
+2=4.4
+1=5.5
+-- END DICTIONARY
+-- START TREE 1
+6
+ent|3|entrada!11@entrada!19@entrada_split!11@
+imp|1|impares!27@
+may|1|mayor!35@
+num|6|numero!43@numero2!35@numeros_ordenados!35@numero1!35@numero3!35@numeros!35@
+par|1|pares!27@
+voc|1|vocales!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

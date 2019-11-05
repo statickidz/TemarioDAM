@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MultiplesLayouts</string>
+    <string name="strdato">Edita el dato</string>
+    <string name="editTextHing">Tienes que escribir un dato</string>
+    <string name="strImagen">Imagen</string>
+    <string name="strReloj">Reloj</string>
+    <string name="strEditarDato">Dato</string>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pais>
+	<comunidad nombre="Galicia">
+		<idiomas>Gallego y Castellano</idiomas>
+		<provincias>
+			<provincia>La Coruña</provincia>
+			<provincia>Lugo</provincia>
+			<provincia>Orense</provincia>
+			<provincia>Pontevedra</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Castilla y León">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Palencia</provincia>
+			<provincia>Soria</provincia>
+			<provincia>Valladolid</provincia>
+			<provincia>León</provincia>
+			<provincia>Segovia</provincia>
+			<provincia>Salamanca</provincia>
+			<provincia>León</provincia>
+			<provincia>Zamora</provincia>
+			<provincia>Ávila</provincia>
+			<provincia>Burgos</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Madrid">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Madrid</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Castilla La Mancha">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Guadalajara</provincia>
+			<provincia>Cuenca</provincia>
+			<provincia>Albacete</provincia>
+			<provincia>Ciudad Real</provincia>
+			<provincia>Toledo</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="La Rioja">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>La Rioja</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="País Vasco">
+		<idiomas>Vasco y Castellano</idiomas>
+		<provincias>
+			<provincia>Bizkaia</provincia>
+			<provincia>Guipuzkoa</provincia>
+			<provincia>Araba</provincia>
+			<provincia>Nafarroa</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Valencia">
+		<idiomas>Valenciano y Castellano</idiomas>
+		<provincias>
+			<provincia>Castellón</provincia>
+			<provincia>Valencia</provincia>
+			<provincia>Alicante</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Murcia">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Murcia</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Baleares">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Baleares</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Asturias">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Asturias</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Aragón">
+		<idiomas>Aragonés y Castellano</idiomas>
+		<provincias>
+			<provincia>Huesca</provincia>
+			<provincia>Zaragoza</provincia>
+			<provincia>Teruel</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Andalucía">
+		<idiomas>Castellano con matices</idiomas>
+		<provincias>
+			<provincia>Huelva</provincia>
+			<provincia>Sevilla</provincia>
+			<provincia>Cádiz</provincia>
+			<provincia>Córdoba</provincia>
+			<provincia>Málaga</provincia>
+			<provincia>Jaen</provincia>
+			<provincia>Granada</provincia>
+			<provincia>Almería</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Catalunya">
+		<idiomas>Catalán y Castellano</idiomas>
+		<provincias>
+			<provincia>Lleida</provincia>
+			<provincia>Tarragona</provincia>
+			<provincia>Barcelona</provincia>
+			<provincia>Girona</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Canarias">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Sta. Cruz de Tenerife</provincia>
+			<provincia>Las Palmas</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Cantabria">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Cantabria</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Extremadura">
+		<idiomas>Castellano</idiomas>
+		<provincias>
+			<provincia>Cáceres</provincia>
+			<provincia>Badajoz</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Ceuta">
+		<idiomas>Marroquí y Castellano</idiomas>
+		<provincias>
+			<provincia>Ceuta</provincia>
+		</provincias>
+	</comunidad>
+	<comunidad nombre="Melilla">
+		<idiomas>Marroquí y Castellano</idiomas>
+		<provincias>
+			<provincia>Melilla</provincia>
+		</provincias>
+	</comunidad>
+</pais>

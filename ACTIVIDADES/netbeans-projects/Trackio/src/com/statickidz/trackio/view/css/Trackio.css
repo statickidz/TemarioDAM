@@ -1,0 +1,316 @@
+
+/**
+ *
+ * @author Adrián Barrio Andrés
+ * @email statickidz@gmail.com
+ * @web https://statickidz.com
+ */
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-border-radius: 30;
+    -fx-background-color: #15141b;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-opacity: 0.7;
+}
+
+.button:hover {
+    -fx-opacity: 1;
+}
+
+.background {
+    -fx-background-color: #15141b;
+}
+
+.background-player {
+    -fx-background-image: url("../img/bg.png");
+    -fx-background-position: center bottom;
+    -fx-background-color: #15141b;
+}
+
+.button-prev,
+.button-next {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button-play {
+    -fx-padding: 5 22 5 24;   
+    -fx-border-radius: 15em;
+    -fx-min-width: 60px;
+    -fx-min-height: 60px;
+    -fx-max-width: 60px;
+    -fx-max-height: 60px;
+    -fx-background-color: transparent;
+    -fx-text-alignment: center;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+
+.button-play .icon-play {
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-title {
+    -fx-text-alignment: center;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Regular";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-author {
+    -fx-text-alignment: center;
+    -fx-font-size: 8pt;
+    -fx-font-family: "Segoe UI Regular";
+    -fx-text-fill: #9b9da2;
+    -fx-opacity: 1;
+}
+
+.label-time {
+    -fx-text-alignment: center;
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+    -fx-opacity: 1;
+}
+
+.label-new-playlist {
+    -fx-font-family: "Segoe UI Regular";
+    -fx-text-fill: #40edbd;
+    -fx-padding: 6 15 6 15;
+    -fx-opacity: 1;
+}
+
+.label-new-playlist:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.table-view {
+    -fx-base: #15141b;
+    -fx-control-inner-background: #15141b;
+    -fx-background-color: #15141b;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 0.3 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(#6e6d70, 2%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #6e6d70;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell,
+.table-view:row-selection .table-row-cell {
+    -fx-text-fill: #6e6d70;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-insets: 0, 0 0 0 0;
+    -fx-text-fill: white;
+}
+
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-insets: 0, 0 0 0 0;
+    -fx-text-fill: #8e8b97;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: #15141b;
+    -fx-background-color: #15141b;
+}
+
+.split-pane {
+    -fx-padding: 0 0 0 0;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 1 0 1;
+    -fx-cursor: default;
+}
+
+.split-pane-divider {
+   -fx-background-color: transparent;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#15141b,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#15141b,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+	-fx-background-color: black;
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-border-radius: 0;
+}
+
+
+.progress-bar {
+    -fx-indeterminate-bar-length: 60;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: true;
+    -fx-indeterminate-bar-animation-time: 2;
+    -fx-cursor: hand;
+}
+.progress-bar .bar {
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.416667em; /* 5 */
+}
+.progress-bar:indeterminate > .bar {
+    -fx-background-color: linear-gradient(to left, transparent, -fx-accent);
+}
+.progress-bar > .track {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1;
+    -fx-background-radius: 6, 5, 4;
+}
+
+.button-toolbar {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 7;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8e8b97;
+    -fx-padding: 6 15 6 15;
+}
+
+.list-cell .tracklist-play-icon {
+    -fx-fill: #8e8b97;
+}
+
+.list-cell:filled:selected:focused .tracklist-play-icon,
+.list-cell:filled:selected .tracklist-play-icon {
+    -fx-fill: white;
+}
+
+.list-cell:even {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8e8b97;
+}
+
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: #8e8b97;
+    -fx-cursor: hand;
+}
+
+
+.list-view .scroll-bar:horizontal,
+.list-view .scroll-bar:vertical {
+    -fx-background-color:transparent;
+    -fx-padding: 0.1;
+    -fx-background-insets: 0.1;
+    -fx-border-insets: 0.1;
+    -fx-opacity: 0;
+}
+
+.list-view:hover .scroll-bar:horizontal,
+.list-view:hover .scroll-bar:vertical {
+    -fx-opacity: 0.1;
+}
+
+.list-view .increment-button,
+.list-view .decrement-button {
+    -fx-border-width: 0;
+    -fx-width: 0;
+    -fx-height: 0;
+    -fx-opacity: 0;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.list-view .scroll-bar:horizontal .track ,
+.list-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: derive(transparent,80%);
+}
+
+.hide {
+    -fx-opacity: 0;
+}

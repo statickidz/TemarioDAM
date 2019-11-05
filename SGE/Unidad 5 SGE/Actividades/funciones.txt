@@ -1,0 +1,111 @@
+5.18
+
+# -*- coding: utf-8 -*-
+# definición de la función
+print "    definición  de funciones    "
+def miFun(param):
+    if param > 2: return "Mayor de dos"
+    else: return "Menor o igual que dos"
+print miFun(2) 
+print miFun(3) 
+print miFun("abcd")
+
+# parámetros optativos
+print "    parámetros optativos o por defecto    "
+def miFun2(par1, par2="Hola", par3=(True, 2)): 
+    print "Parámetros:", par1, par2, par3
+miFun2("Adios")
+miFun2(23, "Adiós")
+miFun2(4, par3="Adios")
+miFun2(2 + 5j, par3=23, par2="Par1")
+
+# parámetros variables (el parámetro es una tupla si *,diccionario si **)
+print"    parámetros variables    "
+def miFun3(*params): 
+    for ele in params: print ele
+miFun3("a") 
+miFun3(1, 2, "abc")
+
+5.19
+
+# -*- coding: utf-8 -*-
+#Variables globales y locales, sólo las listas y diccionarios mantienen cambio
+print"    variables globales y locales    "
+varExtFija = 9; 
+varExtMod = [0, 0] 
+def miFun4():
+    varExtFija = 1;
+    varExtMod[0] = 1;
+    print "Dentro"
+    print "El valor de la externa fija", varExtFija 
+    print "El valor de la externa variable", varExtMod 
+
+print "Antes"
+print "El valor de la externa fija", varExtFija
+print "El valor de la externa variable", varExtMod
+miFun4()
+print "Después"
+print "El valor de la externa fija", varExtFija 
+print "El valor de la externa variable", varExtMod
+
+varExtFija1 = 9;
+varExtMod1 = [0, 0] 
+def miFun5(p1, p2):
+    p1 = 1; # Variable interna no usa el parámetro
+    p2[0]=1;
+    print "Dentro"
+    print "El valor de la externa fija", p1 
+    print "El valor de la externa variable", p2
+    
+print "Antes"
+print "El valor de la externa fija", varExtFija1 
+print "El valor de la externa variable", varExtMod1 
+miFun5(varExtFija1, varExtMod1) 
+print "Después"
+print "El valor de la externa fija", varExtFija1 
+print "El valor de la externa variable", varExtMod1
+
+5.20
+
+# -*- coding: utf-8 -*-
+print"    Funciones a listas    "
+#    map aplica una función a cada elemento 
+INum1 = [1, 2, 3]
+def cuadrado(n): 
+    return n * n
+print INum1, "map:", map(cuadrado, INum1)
+
+#    filter verifica si cumplen condición 
+INum1 =[1, 2, 3, 4, 5, 6, 7, 8]
+def par(n):
+    return (n % 2 == 0) 
+print INum1, "filter:", filter(par, INum1)
+
+#    reduce opera dos a dos de la lista
+INum1 =[1, 2, 3]
+def suma(n, m): 
+    return n + m 
+print INum1, "reduce:", reduce(suma, INum1)
+
+5.21
+
+# -*- coding: utf-8 -*-
+print"    Funciones básicas    "
+def miFun5(p1, p2):
+    p1 = 1; # Variable interna no usa el parámetro
+    p2[0]=1;
+    print "Dentro"
+    print "El valor de la externa fija", p1 
+    print "El valor de la externa variable", p2
+print type(miFun5) #devuelve el valor de lo pasado
+print str(5) #convierte a cadena
+print dir(miFun5) #devuelve el contenido de un objeto
+print callable(miFun5) #determina si el objeto se puede ejecutar
+
+print"    Punteros a funciones    "
+INum1 = [1, 2, 3]
+print INum1
+INum1pop = getattr(INum1, "pop") # referencia al método pop de INum1, puntero a esa función
+print callable(INum1pop)
+INum1pop() # llamamos a la función
+print INum1

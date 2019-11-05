@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reproductor3d.Reproductor3d">
+   <right>
+      <Button mnemonicParsing="false" onAction="#stopAudio" text="STOP" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <Button mnemonicParsing="false" onAction="#startAudio" text="PLAY" BorderPane.alignment="CENTER" />
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Audio">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#startAudio" text="Play" />
+                  <MenuItem mnemonicParsing="false" onAction="#stopAudio" text="Stop" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" text="Button" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="466.0" text="Reproductor 3D" textAlignment="CENTER">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="12.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" text="Button" />
+        </items>
+      </ToolBar>
+   </bottom>
+</BorderPane>

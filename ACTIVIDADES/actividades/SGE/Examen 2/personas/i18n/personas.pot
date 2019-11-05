@@ -1,0 +1,72 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* personas
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20140221-003045\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-22 16:07+0000\n"
+"PO-Revision-Date: 2016-02-22 16:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: personas
+#: view:personas:0
+#: field:personas,name:0
+msgid "Name"
+msgstr ""
+
+#. module: personas
+#: field:personas,gender:0
+msgid "Gender"
+msgstr ""
+
+#. module: personas
+#: model:ir.ui.menu,name:personas.personas_form
+msgid "My Persons"
+msgstr ""
+
+#. module: personas
+#: model:ir.model,name:personas.model_personas
+msgid "personas"
+msgstr ""
+
+#. module: personas
+#: field:personas,telephone:0
+msgid "Telephone"
+msgstr ""
+
+#. module: personas
+#: model:ir.actions.act_window,name:personas.action_personas_form
+#: model:ir.ui.menu,name:personas.personas
+#: model:ir.ui.menu,name:personas.personas_menu
+#: view:personas:0
+msgid "Persons"
+msgstr ""
+
+#. module: personas
+#: field:personas,street:0
+msgid "Street"
+msgstr ""
+
+#. module: personas
+#: selection:personas,gender:0
+msgid "Female"
+msgstr ""
+
+#. module: personas
+#: view:personas:0
+#: field:personas,lastname:0
+msgid "Lastname"
+msgstr ""
+
+#. module: personas
+#: selection:personas,gender:0
+msgid "Male"
+msgstr ""
+

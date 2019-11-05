@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp> 
+<data>
+	
+	<menuitem name="Libros 2" id="libros2_menu"/> -->
+	
+	<record model="ir.ui.view" id="milibro2_cat_tree_view"> 
+		<field name="name">milibro2.categorias.tree</field> 
+		<field name="model">milibro2.categorias</field> 
+		<field name="type">tree</field> 
+		<field name="arch" type="xml"> 
+			<tree string="Categorias"> 
+				<field name="name"/> 
+			</tree> 
+		</field> 
+	</record>
+	
+	<record model="ir.ui.view" id="milibro2_cat_form_view"> 
+		<field name="name">milibro2.categorias.form</field> 
+		<field name="model">milibro2.categorias</field> 
+		<field name="type">form</field> 
+		<field name="arch" type="xml"> 
+			<form string="Categorias">
+				<field name="name"/> 
+			</form> 
+		</field> 
+	</record>
+	
+	<record model="ir.actions.act_window" id="action_milibro2_cat_form">
+		<field name="name">milibro2_cat</field> 
+		<field name="res_model">milibro2.categorias</field> 
+	</record>
+	
+		
+	<record model="ir.ui.view" id="milibro2_tree_view"> 
+		<field name="name">milibro2.tree</field> 
+		<field name="model">milibro2</field> 
+		<field name="type">tree</field> 
+		<field name="arch" type="xml"> 
+			<tree string="Libros"> 
+				<field name="titulo"/> 
+				<field name="autor"/> 
+			</tree> 
+		</field> 
+	</record>
+	
+	<record model="ir.ui.view" id="milibro2_form_view"> 
+		<field name="name">milibro2.form</field> 
+		<field name="model">milibro2</field> 
+		<field name="type">form</field> 
+		<field name="arch" type="xml"> 
+			<form string="Libros"> 
+				<field name="titulo"/> 
+				<field name="paginas"/> 
+				<field name="autor"/> 
+				<field name="isbn"/> 
+				<field name="precio"/> 
+				<field name="fecha"/> 
+				<field name="revisado"/> 
+				<field name="aprobado"/> 
+				<field name="categoria"/> 
+				<field name="resumen"/> 
+			</form> 
+		</field> 
+	</record>
+	
+	<record model="ir.actions.act_window" id="action_milibro2_form">
+		<field name="name">milibro2</field>
+		<field name="res_model">milibro2</field> 
+	</record>
+	
+	<menuitem name="Libros 2" id="mislibros2" parent="libros2_menu"/>
+	<menuitem name="Categorias" id="milibro2_cat_form" parent="mislibros2" action="action_milibro2_cat_form" />	
+	<menuitem name="Mis Libros 2" id="milibro2_form" parent="mislibros2" action="action_milibro2_form"/>
+	
+</data> 
+</openerp>

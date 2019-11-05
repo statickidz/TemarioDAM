@@ -1,0 +1,21 @@
+-- VERSION_4
+-- START DISKCACHE_2
+G:\dam2\eclipse-projects\.metadata\.plugins\org.eclipse.core.resources\.projects\CodeAcademy\com.python.pydev.analysis\v2_indexcache
+eliminar_repetidos.__init__|1453307022939703000|G:\dam2\eclipse-projects\CodeAcademy\src\eliminar_repetidos\__init__.py
+media.media|1453308584391388000|G:\dam2\eclipse-projects\CodeAcademy\src\media\media.py
+media.__init__|1453307856589772000|G:\dam2\eclipse-projects\CodeAcademy\src\media\__init__.py
+eliminar_repetidos.eliminar_repetidos|1453307794557664000|G:\dam2\eclipse-projects\CodeAcademy\src\eliminar_repetidos\eliminar_repetidos.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+2=media.media
+1=eliminar_repetidos.eliminar_repetidos
+-- END DICTIONARY
+-- START TREE 1
+2
+eli|1|eliminar_repetidos!10@
+med|1|media!18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
