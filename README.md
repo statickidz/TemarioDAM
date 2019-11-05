@@ -18,9 +18,7 @@ Temario, apuntes y ejercicios del módulo de Desarrollo de Aplicaciones Multipla
 
 ### Proyecto Final
 
-App para Android SendaCYL. Rutas en entornos naturales de Castilla y León.
-
-Descubre las rutas más bonitas de tu provincia, hazlas y comparte la experiencia.
+App para Android SendaCYL. Rutas en entornos naturales de Castilla y León. Descubre las rutas más bonitas de tu provincia, hazlas y comparte la experiencia.
 
   - [PlayStore](https://play.google.com/store/apps/details?id=com.sendacyl&hl=es)
   - Código Fuente (pendiente)
