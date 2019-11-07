@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">SendaCYL</string>
     <string name="google_server_key">YOUR_API_KEY</string>
     <string name="google_android_key">YOUR_API_KEY</string>
