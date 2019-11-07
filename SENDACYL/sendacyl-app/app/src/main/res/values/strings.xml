@@ -2,8 +2,8 @@
 <resources>
 
     <string name="app_name">SendaCYL</string>
-    <string name="google_server_key">AIzaSyBivcfAp6vAbdeTM4gPGVWQZXoxFzV3P8A</string>
-    <string name="google_android_key">AIzaSyCSNrV2OdkdZnsP99JAxtGJtCfJLZRBsr4</string>
+    <string name="google_server_key">YOUR_API_KEY</string>
+    <string name="google_android_key">YOUR_API_KEY</string>
 
     <!-- menu -->
     <string name="routes">Rutas</string>
