@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapViewHighlight"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_height_routes"
+        android:adjustViewBounds="true"
+        android:background="@color/actionBarColor"
+        android:clickable="false"
+        android:maxHeight="180dp"
+        android:scaleType="centerCrop"
+        map:liteMode="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/mapViewHighlight"
+        android:background="@drawable/highlight_gradient">
+
+        <!-- Route name -->
+        <TextView
+            android:id="@+id/nameHighlight"
+            style="@style/listname"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="30dp"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!-- Route data -->
+        <TextView
+            android:id="@+id/dataHighlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+s
+    </LinearLayout>
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/progressBarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/mapViewHighlight"
+        android:layout_alignTop="@+id/mapViewHighlight"
+        android:background="@color/loading_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBarInitial"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/loading_route"
+            android:textColor="@color/abc_secondary_text_material_dark" />
+
+        <ProgressBar
+            android:id="@+id/progressBarInitial"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/activity_vertical_margin" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

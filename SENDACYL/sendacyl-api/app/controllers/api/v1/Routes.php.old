@@ -1,0 +1,176 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+header('Content-Type: application/json');
+
+class Routes extends CI_Controller
+{
+
+    private $dev = false;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->helper("api_helper");
+        $this->load->model("routes_model");
+        if ($this->input->get("dev")) {
+            $this->dev = true;
+        }
+    }
+
+    public function index()
+    {
+        $response = new stdClass();
+        $count = formatCount($this->input->get("count"));
+        $coords = $this->input->get("coords");
+        $response->nearby = false;
+
+        if(!empty($coords)) {
+            $coords = formatCoords($coords);
+            $routes = $this->routes_model->getNearby($coords[0], $coords[1], $count);
+            $routesCount = count($routes);
+            $allRoutesCount = $this->routes_model->getNearby($coords[0], $coords[1], NULL);
+            if ($routesCount > 0) {
+                $response->nearby = true;
+                $response->status = "ok";
+                $response->count = $routesCount;
+                $response->pages = intval(count($allRoutesCount) / 10);
+                $response->routes = $routes;
+            } else {
+                $response->nearby = false;
+            }
+        }
+
+        if(!$response->nearby) {
+            $routes = $this->routes_model->getAll($count);
+            $routesCount = count($routes);
+            $allRoutesCount = $this->routes_model->getAll();
+            if ($routesCount > 0) {
+                $response->status = "ok";
+                $response->count = $routesCount;
+                $response->pages = intval(count($allRoutesCount) / 10);
+                $response->routes = $routes;
+            } else {
+                $response->status = "error";
+            }
+        }
+
+        print json_encode($response, ($this->dev) ? JSON_PRETTY_PRINT : NULL);
+    }
+
+    public function view($id)
+    {
+        $response = new stdClass();
+        $route = $this->routes_model->getRoute($id);
+        if (count($route) > 0) {
+            $response->status = "ok";
+            $response->route = $route;
+        } else {
+            $response->status = "error";
+        }
+
+        print json_encode($response, ($this->dev) ? JSON_PRETTY_PRINT : NULL);
+    }
+
+    public function province($province)
+    {
+        $response = new stdClass();
+        $count = formatCount($this->input->get("count"));
+        $routes = $this->routes_model->getAllByProvince(urldecode($province), $count);
+        $routesCount = count($routes);
+        $allRoutesCount = $this->routes_model->getAllByProvince(urldecode($province), NULL);
+        if ($routesCount > 0) {
+            $response->status = "ok";
+            $response->count = $routesCount;
+            $response->pages = intval(count($allRoutesCount) / 10);
+            $response->routes = $routes;
+        } else {
+            $response->status = "error";
+        }
+
+        print json_encode($response, ($this->dev) ? JSON_PRETTY_PRINT : NULL);
+    }
+
+    public function search($search)
+    {
+        $response = new stdClass();
+        $count = formatCount($this->input->get("count"));
+        $routes = $this->routes_model->getAllBySearch(urldecode($search), $count);
+        $routesCount = count($routes);
+        $allRoutesCount = $this->routes_model->getAllBySearch(urldecode($search), NULL);
+        if ($routesCount > 0) {
+            $response->status = "ok";
+            $response->count = $routesCount;
+            $response->pages = intval(count($allRoutesCount) / 10);
+            $response->routes = $routes;
+        } else {
+            $response->status = "error";
+        }
+
+        print json_encode($response, ($this->dev) ? JSON_PRETTY_PRINT : NULL);
+    }
+
+    public function filter()
+    {
+        $response = new stdClass();
+        $count = formatCount($this->input->get("count"));
+        $routes = $this->routes_model->getAllByFilter($this->input->get(), $count);
+        $routesCount = count($routes);
+        $allRoutesCount = $this->routes_model->getAllByFilter($this->input->get(), NULL);
+        if ($routesCount > 0) {
+            $response->status = "ok";
+            $response->count = $routesCount;
+            $response->pages = intval(count($allRoutesCount) / 10);
+            $response->routes = $routes;
+        } else {
+            $response->status = "error";
+        }
+
+        print json_encode($response, ($this->dev) ? JSON_PRETTY_PRINT : NULL);
+    }
+
+    public function nearby()
+    {
+        $response = new stdClass();
+        $count = formatCount($this->input->get("count"));
+        $coords = formatCoords($this->input->get("coords"));
+        $routes = $this->routes_model->getNearby($coords[0], $coords[1], $count);
+        $routesCount = count($routes);
+        $allRoutesCount = $this->routes_model->getNearby($coords[0], $coords[1], NULL);
+        if ($routesCount > 0) {
+            $response->status = "ok";
+            $response->count = $routesCount;
+            $response->pages = intval(count($allRoutesCount) / 10);
+            $response->routes = $routes;
+        } else {
+            $response->status = "error";
+        }
+
+        print json_encode($response, ($this->dev) ? JSON_PRETTY_PRINT : NULL);
+    }
+
+    public function test() {
+        $this->load->model('user');
+        $user = new User();
+        $user->is_admin = 0;
+        if($user->validate()) $user->save();
+    }
+
+    /*public function fix() {
+        $this->load->helper("import_helper");
+        $routes = $this->routes_model->getAll();
+        foreach ($routes as $r) {
+            $id = $r->id;
+
+            $kml = simplexml_load_file("./public/kml/$id.kml");
+
+            $placemark = $kml->Document->Folder->Placemark;
+
+            $startCoordinates = getStartCoordinates($placemark);
+
+            $this->routes_model->fix($id, $startCoordinates);
+
+            echo $id .' --------------- ' . $startCoordinates.'<br>';
+        }
+    }*/
+
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SendaCYL</string>
+    <string name="google_server_key">AIzaSyBivcfAp6vAbdeTM4gPGVWQZXoxFzV3P8A</string>
+    <string name="google_android_key">AIzaSyCSNrV2OdkdZnsP99JAxtGJtCfJLZRBsr4</string>
+
+    <!-- menu -->
+    <string name="routes">Rutas</string>
+    <string name="explore">Explorar</string>
+    <string name="map">Mapa</string>
+    <string name="provinces">Provincias</string>
+    <string name="config">Configuración</string>
+    <string name="options">Opciones</string>
+
+    <!-- Route difficulty -->
+    <string name="normal">Sin Determinar</string>
+    <string name="easy">Fácil</string>
+    <string name="medium">Moderado</string>
+    <string name="hard">Difícil</string>
+
+    <!-- About text -->
+    <string name="about_text"><![CDATA[
+    <b>Version 1.0</b>
+    <br><br>SendaCYL
+    ]]></string>
+
+    <!-- Test text -->
+    <string name="lorem_ipsum"><![CDATA[
+    <b>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</b>
+    <br><br>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.<br><br>
+    <i>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</i>
+    ]]></string>
+
+    <!-- settings -->
+    <string name="settings_general">General</string>
+
+    <string name="settings_showmenu_summary">Si/No</string>
+    <string name="settings_showmenu">Mostrar menu</string>
+
+    <string name="settings_other_summary">Otra información</string>
+    <string name="settings_other">Otro</string>
+    
+    <string name="settings_aboutus_summary">Información sobre la aplicación</string>
+    <string name="settings_aboutus">Acerca de</string>
+    
+    <string name="settings_rate_summary">Ayuda a otros usuarios a que descubran SendaCYL</string>
+    <string name="settings_rate">Valorar aplicación</string>
+    
+    <!-- Routes -->
+    <string name="routes_search_hint">Buscar rutas</string>
+
+    <!-- general-->   
+    <string name="share_header">Compartir</string>
+    <string name="share_using">Compartir usando…</string>
+    <string name="about_header">Acerca de</string>
+    <string name="open_button">Abrir</string>
+    <string name="textview_date">"Fecha: "</string>
+    <string name="loading">Cargando…</string>
+    <string name="loading_route">Cargando ruta…</string>
+    <string name="empty_textview">Error cargando los datos</string>
+    <string name="section">Sección</string>
+    <string name="share">Compartir</string>
+    <string name="street_view">StreetView</string>
+    <string name="info">Info</string>
+    <string name="refresh">Refrescar</string>
+    <string name="search">Buscar</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="already_loading">Cargando nuevo contenido...</string>
+    <string name="drawer_open">Menu abierto</string>
+    <string name="drawer_close">Menu cerrado</string>
+    <string name="not_back">No puedes ir hacia atrás</string>
+    
+    <!-- Connection dialogs -->
+    <string name="ok">Aceptar</string>
+    <string name="dialog_connection_name">No hay conexión</string>
+    <string name="dialog_connection_description">No podemos conectar a nuestros servidores en este momento.</string>
+    <string name="dialog_internet_name">No hay Internet</string>
+    <string name="dialog_internet_description">Parece que no dispones de una conexión a Internet, nuestra aplicación necesita conectarse para poder traer todas las rutas.</string>
+
+    <!-- Login Signup -->
+    <string name="account">Cuenta</string>
+    <string name="login">Entrar</string>
+</resources>

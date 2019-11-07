@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="provinces">
+        <item>Ávila</item>
+        <item>Burgos</item>
+        <item>León</item>
+        <item>Palencia</item>
+        <item>Segovia</item>
+        <item>Valladolid</item>
+        <item>Soria</item>
+        <item>Salamanca</item>
+        <item>Zamora</item>
+    </string-array>
+    <string-array name="difficulties">
+        <item>Sin Determinar</item>
+        <item>Fácil</item>
+        <item>Moderado</item>
+        <item>Difícil</item>
+    </string-array>
+</resources>

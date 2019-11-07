@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- preferenceFragment -->
+    <dimen name="preference_fragment_padding_side">64dp</dimen>
+    
+    <!-- Defaults -->
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="activity_detail_horizontal_margin">64dp</dimen>
+    <dimen name="image_height_routes">300dp</dimen>
+
+</resources>

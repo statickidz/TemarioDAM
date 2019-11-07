@@ -1,0 +1,20 @@
+{
+	"description": "SendaCYL",
+	"name": "statickidz/sendacyl",
+	"type": "project",
+	"homepage": "http://sendacyl.com",
+	"license": "MIT",
+	"support": {
+		"forum": "https://statickidz.com/"
+	},
+	"require": {
+		"php": ">=5.2.4",
+		"illuminate/database": "5.0.28"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*"
+	},
+	"config": {
+		"vendor-dir": "app/vendor"
+	}
+}

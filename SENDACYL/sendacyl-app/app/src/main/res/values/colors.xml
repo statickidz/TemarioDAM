@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="twitter">#34B2E7</color>
+    <color name="actionBarColor">#00892e</color>
+    
+    <!-- Android -->
+    <color name="primary_color">#00892e</color>
+    <color name="primary_dark_color">#00892e</color>
+    <color name="accent_color">#f0ad4e</color>
+    <color name="drawer_background">#ffffea</color>
+    <color name="window_background">#DEDEDE</color>
+    <color name="text_primary_color">#777777</color>
+    <color name="navigation_color">#000000</color>
+    <color name="loading_background">#B3000000</color>
+
+    <color name="selected_gray">#ffdbdbdb</color>
+    <color name="btn_gray">#ffdbdbdb</color>
+    
+    <!-- Regular colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#A9A9A9</color>
+    <color name="dim_gray">#696969</color>
+    <color name="light_gray">#BDBDBD</color>
+    <color name="dark_gray">#292929</color>
+
+    <!-- Route colors -->
+    <color name="route_diff_default">#666666</color>
+    <color name="route_diff_low">#88c057</color>
+    <color name="route_diff_medium">#ffcc66</color>
+    <color name="route_diff_hard">#ed7161</color>
+
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    
+</resources>

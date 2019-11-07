@@ -1,0 +1,102 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Routes_model extends CI_Model
+{
+
+    private $table = 'routes';
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function add($route)
+    {
+        $this->db->insert($this->table, $route);
+        return $this->db->insert_id();
+    }
+
+    public function get()
+    {
+        $query = $this->db->get($this->table);
+        return $query->result();
+    }
+
+    public function getAll($count = array(0, 10))
+    {
+        $query = $this->db->get($this->table, $count[0], $count[1]);
+        return $query->result();
+    }
+
+    public function getAllByProvince($province, $count = array(0, 10))
+    {
+        $where = array('gmaps_province' => $province);
+        $query = $this->db->get_where($this->table, $where, $count[0], $count[1]);
+        return $query->result();
+    }
+
+    public function getAllByFilter($params, $count = array(0, 10))
+    {
+        $where = array();
+        if(isset($params['diff']))
+            $where['senda_dificultad'] = $params['diff'];
+        if(isset($params['province']))
+            $where['gmaps_province'] = $params['province'];
+        $query = $this->db->get_where($this->table, $where, $count[0], $count[1]);
+        return $query->result();
+    }
+
+    public function getAllBySearch($search, $count = array(0, 10))
+    {
+        $query = $this->db->like('equip_b_nombre', $search);
+        $query = $this->db->or_like('equip_a_observaciones', $search);
+        $query = $this->db->or_like('equip_b_acceso_modo', $search);
+        $query = $this->db->or_like('gmaps_locality', $search);
+        $query = $this->db->or_like('gmaps_province', $search);
+        $query = $this->db->or_like('gmaps_street', $search);
+        $query = $this->db->get($this->table, $count[0], $count[1]);
+        return $query->result();
+    }
+
+    public function getRoute($id)
+    {
+        $query = $this->db->get_where($this->table, array('id' => $id), 1);
+        return $query->result();
+    }
+
+    public function getNearby($latitude, $longitude, $count = array(0, 10)) {
+        if($latitude != "0" && $longitude != "0") {
+            $sql = "SELECT *, (
+                        3959 * acos (
+                          cos ( RADIANS($latitude) )
+                          * cos( RADIANS( start_lat ) )
+                          * cos( RADIANS( start_lng ) - RADIANS($longitude) )
+                          + sin ( RADIANS($latitude) )
+                          * sin( RADIANS( start_lat ) )
+                        )
+                      ) AS distance
+                    FROM $this->table
+                    HAVING distance < 50
+                    ORDER BY distance";
+            if($count[0] != NULL) $sql .= " LIMIT $count[1], $count[0]";
+            $query = $this->db->query($sql);
+            return $query->result();
+        } else {
+            return $this->getAll($count);
+        }
+
+    }
+
+    /*public function fix($id, $coordinates) {
+        $coords = explode(",", $coordinates);
+
+        $data = array('start_lat' => $coords[0],
+            'start_lng' => $coords[1],
+         );
+
+        $this->db->where('id', $id);
+        $this->db->update($this->table, $data);
+    }*/
+
+}

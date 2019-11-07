@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.sendacyl"
+        minSdkVersion 15
+        targetSdkVersion 28
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    /*
+    implementation files('libs/universal-image-loader-1.9.2.jar')*/
+    implementation files('libs/jsoup-1.7.3.jar')
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.android.support:support-v4:28+'
+    implementation 'com.android.support:appcompat-v7:28+'
+    implementation 'com.android.support:recyclerview-v7:28+'
+    implementation 'com.google.android.gms:play-services:7+'
+    implementation 'com.google.maps.android:android-maps-utils:0.4+'
+    implementation 'com.android.support:design:28+'
+    implementation 'com.jakewharton:butterknife:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+}

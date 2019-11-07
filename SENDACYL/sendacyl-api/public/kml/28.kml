@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KmlFile</name>
+    <Style id="sendacyl">
+      <LineStyle>
+        <width>9</width>
+        <color>ff0098ff</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>ff0098ff</color>
+      </PolyStyle>
+    </Style>
+    <Folder>
+      <name>SendaCYL Route</name>
+      <visibility>1</visibility>
+      <description>SendaCYL Route</description>
+      <Placemark>
+        <name>SendaCYL Route</name>
+        <visibility>1</visibility>
+        <styleUrl>#sendacyl</styleUrl>
+        <LineString>
+          <coordinates>-6.276917793132015,41.42184298791508 -6.277087760911257,41.4217316454109 -6.277029022529267,41.421645378512046 -6.276907344005953,41.4215562268598 -6.276860955397371,41.42144949152518 -6.276869266476475,41.4213235544213 -6.2769630909583425,41.42115749399433 -6.276878791590566,41.42108309530831 -6.276808182797701,41.42090724939349 -6.276781786913598,41.420807811254434 -6.27670653675223,41.4206682071703</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
